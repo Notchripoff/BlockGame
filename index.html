@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>Block Game</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/roblox-js@1.2.1/dist/roblox.min.js"></script>
+    <script>
+    
+      require('./Block.lua');
+      require('./Game.lua');
+      require('./Main.lua');
+      require('./TerrainGenerator.lua');
+      require('./Player.lua');
+
+      local game = Game.new();
+      game:init();
+
+      // Run the game loop
+      while true do
+        game:update(0.01);
+        game:draw();
+        wait();
+      end
+    </script>
+  </body>
+</html>
